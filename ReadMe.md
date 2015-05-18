@@ -28,43 +28,50 @@ PHP 5+, MySQL, phpMyAdmin, JQuery, JavaScript, FontAwersome, CSS3.
 
 Functionality:
 =================================================
-> cron.bat
+cron.bat
+-------------------------------------------------------
 	runs the cron.php the schedulre which runs cron job every 5 minutes
 
-> cron.php
+ cron.php
+ ---------------------------------------------------
 	runs cron job every 5 minutes calling index.php every 5 minutes
 
-> index.php
-	main php file that runs the code and has access to all php file in the folder
+ index.php
+ -----------------------------------------------------------------------
+    . main php file that runs the code and has access to all php file in the folder
 
-	calls only once Database.class.php that handles mysql data request to database server
+    . calls only once Database.class.php that handles mysql data request to database server
 
-	calls only once fetchJson.php which access Vanderbilt facebook JSON page 
+    . calls only once fetchJson.php which access Vanderbilt facebook JSON page 
 
-	Creates Database Class instance and access to its function
+    .  Database Class instance and access to its function
 
-	Executes query select, insert, update depending upon the if else ladder
+    .  query select, insert, update depending upon the if else ladder
 
-	result is store in $info array and displayed on browser using HTML5 and JavaScript and PHP.
+    . result is store in $info array and displayed on browser using HTML5 and JavaScript and PHP.
 
-	doSomething is a javascript funtion that creates popup for clicked image for additional details.
+    . doSomething is a javascript funtion that creates popup for clicked image for additional details.
 
->fetchJson.php
-	fetches json from url and decodes json into object array
+fetchJson.php
+---------------------------------------------------------------------------
+    . fetches json from url and decodes json into object array
 
->Database.class.php
-	Connects the databse using information from config.inc.php file
+Database.class.php
+---------------------------------------------------------------------------------------- 
+    . Connects the databse using information from config.inc.php file
 
-	connects through mysqli
+    . connects through mysqli
 
-	function doSelect checks if the object fetched is to be inserted or updated
+    . function doSelect checks if the object fetched is to be inserted or updated
 
-	function doInsert perform sql query either UPDATE or INSERT depending upon the doSelect function if else result
+    . function doInsert perform sql query either UPDATE or INSERT depending upon the doSelect function if else result
 
-	function display SELECTS all information form the table and return the result set back to index.php
+    . function display SELECTS all information form the table and return the result set back to index.php
 
->config.inc.php
-	Store Database username, password, db name, to configure with the database
+config.inc.php
+---------------------------------------------------------------------------------
+    . Store Database username, password, db name, to configure with the database
 
->index.css
-	adds style to index.php result set obtained from the backend
+index.css
+---------------------------------------------------------------------
+    . adds style to index.php result set obtained from the backend
